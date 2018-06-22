@@ -1,23 +1,24 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+
+import Blog from './Blog'
+import LoadingButton from './LoadingButton'
 import Button from './Components/Button/Button'
 
-class App extends Component {
+
+export default class App extends React.Component {
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Button />
+    return <div>
+      <div class="container">
+        <h2>Welcome to React</h2>
+        <div class="btn-group" role="group" aria-label="Example buttons">
+          <LoadingButton>Not Loading Button</LoadingButton>
+          <LoadingButton loading>Loading Button</LoadingButton>
+          <LoadingButton bsStyle="info">Jelly Button</LoadingButton>
+          <Button />
+        </div>
       </div>
-    );
+      <hr/>
+      <Blog/>
+    </div>
   }
 }
-
-export default App;
