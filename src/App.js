@@ -1,8 +1,8 @@
 import React from 'react'
-
 import Blog from './Blog'
 import LoadingButton from './LoadingButton'
 import Button from './Components/Button/Button'
+import Sidebar from './Components/Sidebar/Sidebar'
 
 
 export default class App extends React.Component {
@@ -15,10 +15,11 @@ export default class App extends React.Component {
           <LoadingButton loading>Loading Button</LoadingButton>
           <LoadingButton bsStyle="info">Jelly Button</LoadingButton>
           <Button />
+          <Sidebar />
         </div>
       </div>
-      <hr/>
-      <Blog/>
+      <hr />
+      <Blog />
     </div>
   }
 }

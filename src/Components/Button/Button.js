@@ -12,23 +12,23 @@ class Button extends Component {
   }
 
   addClass = e => {
-    
+
     if (this.state.active && this.state.active === 'btn-warning') {
       this.setState({
         active: 'btn-danger'
       })
     }
     else {
-        this.setState({
-            active: 'btn-warning'
-          })
+      this.setState({
+        active: 'btn-warning'
+      })
     }
   }
 
   render() {
     return (
-        <div className="kamran">
-      <button className={'btn '+ this.state.active} onClick={(e)=>this.addClass(e)}>Sample button</button>
+      <div className="kamran">
+        <button className={'btn ' + this.state.active} onClick={(e) => this.addClass(e)}>Sample button</button>
       </div>
     );
   }
